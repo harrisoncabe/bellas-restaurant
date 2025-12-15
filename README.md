@@ -11,10 +11,9 @@ Family-owned restaurant website serving Tarrytown, NY since 1979.
 
 ## Local Development
 
-1. Clone the repository:
+1. Open the repo
    ```bash
-   git clone https://github.com/harrisoncabe/bellas-restaurant
-   cd bellas-restaurant
+   cd ~/Documents/bellas-restaurant
    ```
 
 2. Open `index.html` in your browser:
@@ -50,6 +49,7 @@ bellas-restaurant/
 - Firefox
 - Safari
 - Edge
+
 
 
 

@@ -1,0 +1,49 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor and IDE Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories (if you add npm/node later)
+node_modules/
+bower_components/
+
+# Build outputs (if you add a build process later)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment variables (if you add backend features)
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+
+# Optional: Ignore large original image files if you optimize them
+# images/originals/
+# *.psd
+# *.ai

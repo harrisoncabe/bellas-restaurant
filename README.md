@@ -13,7 +13,7 @@ Family-owned restaurant website serving Tarrytown, NY since 1979.
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone [https://github.com/harrisoncabe/bellas-restaurant/tree/master]
    cd bellas-restaurant
    ```
 
@@ -71,3 +71,4 @@ Bella's Restaurant
 5 S Broadway, Tarrytown, NY 10591
 Phone: (914) 332-0444
 Email: bellasrestaurantny@gmail.com
+

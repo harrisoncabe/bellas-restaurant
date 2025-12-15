@@ -32,21 +32,6 @@ Family-owned restaurant website serving Tarrytown, NY since 1979.
      ```
    - Then visit `http://localhost:8000`
 
-## Deployment Options
-
-### GitHub Pages
-1. Push to GitHub
-2. Go to Settings > Pages
-3. Select main branch
-4. Your site will be live at `https://yourusername.github.io/bellas-restaurant`
-
-### Netlify
-1. Drag and drop the entire folder to netlify.com
-2. Or connect your GitHub repo for automatic deployments
-
-### Traditional Web Hosting
-1. Upload all files via FTP to your web host
-2. Ensure folder structure is maintained
 
 ## Project Structure
 ```
@@ -71,6 +56,7 @@ Bella's Restaurant
 5 S Broadway, Tarrytown, NY 10591
 Phone: (914) 332-0444
 Email: bellasrestaurantny@gmail.com
+
 
 
 

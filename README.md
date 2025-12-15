@@ -51,13 +51,5 @@ bellas-restaurant/
 - Safari
 - Edge
 
-## Contact
-Bella's Restaurant
-5 S Broadway, Tarrytown, NY 10591
-Phone: (914) 332-0444
-Email: bellasrestaurantny@gmail.com
-
-
-
 
 

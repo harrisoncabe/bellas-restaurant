@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella's Restaurant - Best Breakfast in Tarrytown, NY</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Bella's</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="cart-icon" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Image Upload Section (Admin) -->
+    <div class="upload-section" style="max-width: 1200px; margin: 2rem auto;">
+        <h3>🖼️ Upload Restaurant Images</h3>
+        <p style="color: #7f8c8d; margin-bottom: 1rem;">Upload your photos to display them throughout the site</p>
+        <div class="upload-grid">
+            <div class="upload-box">
+                <label>Breakfast Collage</label>
+                <input type="file" id="collage" accept="image/*" onchange="handleImageUpload(event, 'collage')">
+            </div>
+            <div class="upload-box">
+                <label>Eggs</label>
+                <input type="file" id="eggs" accept="image/*" onchange="handleImageUpload(event, 'eggs')">
+            </div>
+            <div class="upload-box">
+                <label>Breakfast Dish</label>
+                <input type="file" id="breakfast" accept="image/*" onchange="handleImageUpload(event, 'breakfast')">
+            </div>
+            <div class="upload-box">
+                <label>Waffles</label>
+                <input type="file" id="waffles" accept="image/*" onchange="handleImageUpload(event, 'waffles')">
+            </div>
+            <div class="upload-box">
+                <label>Salad</label>
+                <input type="file" id="salad" accept="image/*" onchange="handleImageUpload(event, 'salad')">
+            </div>
+            <div class="upload-box">
+                <label>Dessert Collage</label>
+                <input type="file" id="desserts" accept="image/*" onchange="handleImageUpload(event, 'desserts')">
+            </div>
+            <div class="upload-box">
+                <label>Greek Salad</label>
+                <input type="file" id="greeksalad" accept="image/*" onchange="handleImageUpload(event, 'greeksalad')">
+            </div>
+            <div class="upload-box">
+                <label>Storefront</label>
+                <input type="file" id="storefront" accept="image/*" onchange="handleImageUpload(event, 'storefront')">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="award-badge">🏆 Best Breakfast - Westchester Magazine</div>
+            <h1>Comfort Food Made Fresh</h1>
+            <p>Taste our delicious food & experience a perfect blend of Quality and Taste</p>
+            <a href="#menu" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Breakfast Highlight -->
+    <section style="background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);">
+        <h2 class="section-title">Breakfast is the happiest meal of the day!</h2>
+        <p class="section-subtitle">We serve a variety of breakfast dishes such as Sandwiches, Omelettes, Waffles, Wraps and many more.</p>
+        <div style="text-align: center;">
+            <a href="#menu" class="cta-button">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2 class="section-title">Our Gallery</h2>
+        <p class="section-subtitle">A taste of what we serve</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/placeholder-food.svg" alt="Delicious breakfast collage">
+            </div>
+            <div class="gallery-item">
+                <img src="images/placeholder-food.svg" alt="Desserts">
+            </div>
+            <div class="gallery-item">
+                <img src="images/placeholder-storefront.svg" alt="Bella's Restaurant storefront">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" style="background: #f8f9fa;">
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">Order your favorites online</p>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="images/placeholder-food.svg" alt="Breakfast Special" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Breakfast Special</h3>
+                    <p>Our signature breakfast dish with fresh herbs and savory flavors</p>
+                    <div class="price">$12.99</div>
+                    <button class="add-to-cart" onclick="addToCart('Breakfast Special', 12.99)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/placeholder-food.svg" alt="Classic Omelette" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Classic Omelette</h3>
+                    <p>Three eggs with your choice of fillings and cheese</p>
+                    <div class="price">$10.99</div>
+                    <button class="add-to-cart" onclick="addToCart('Classic Omelette', 10.99)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/placeholder-food.svg" alt="Belgian Waffles" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Belgian Waffles</h3>
+                    <p>Fluffy waffles with fresh fruit and whipped cream</p>
+                    <div class="price">$11.99</div>
+                    <button class="add-to-cart" onclick="addToCart('Belgian Waffles', 11.99)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/placeholder-food.svg" alt="Breakfast Wrap" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Breakfast Wrap</h3>
+                    <p>Eggs, cheese, and your choice of meat wrapped in a tortilla</p>
+                    <div class="price">$9.99</div>
+                    <button class="add-to-cart" onclick="addToCart('Breakfast Wrap', 9.99)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/placeholder-food.svg" alt="Pancake Stack" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Pancake Stack</h3>
+                    <p>Three fluffy pancakes with maple syrup and butter</p>
+                    <div class="price">$8.99</div>
+                    <button class="add-to-cart" onclick="addToCart('Pancake Stack', 8.99)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="images/placeholder-food.svg" alt="Greek Salad" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Greek Salad</h3>
+                    <p>Fresh vegetables with feta cheese and olives</p>
+                    <div class="price">$10.99</div>
+                    <button class="add-to-cart" onclick="addToCart('Greek Salad', 10.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Welcome to Bella's</h3>
+                <p>We are a family owned restaurant that has been proudly serving the River town communities in Tarrytown NY since 1979.</p>
+                <p>We always strive to provide our customers the best dining experience possible with every visit. Bella's kind and courteous staff will make you feel at home from the first moment you walk through the doors.</p>
+                <p>Our innovative and experienced professional team of Chefs with years of experience in food service will make sure to make you happy with delicious taste and quality food every time you order.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/placeholder-storefront.svg" alt="Bella's Restaurant">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Making your dining experience convenient and memorable</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Order Online</h3>
+                <p>Why wait in line, when you can order online!</p>
+                <a href="#menu" class="service-link">Order Now →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎉</div>
+                <h3>Catering</h3>
+                <p>Let us cater your next event and make it memorable.</p>
+                <a href="#contact" class="service-link">Inquire Now →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎁</div>
+                <h3>Gift Certificates</h3>
+                <p>Offer an unforgettable experience to your dear ones at our restaurant.</p>
+                <a href="#contact" class="service-link">Buy Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section>
+        <div class="testimonial">
+            <p>"Great service, food came quick and was very good. Great people and atmosphere. Would definitely recommend to anyone who is in town!"</p>
+            <div class="testimonial-author">- Dimitri Southworth</div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section id="contact">
+        <h2 class="section-title">Visit Us</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>📍 Address</h3>
+                <p>5 S Broadway<br>Tarrytown, NY 10591</p>
+            </div>
+            <div class="info-card">
+                <h3>📞 Contact</h3>
+                <p>Call: (914) 332-0444<br>Fax: (914) 418-5373</p>
+            </div>
+            <div class="info-card">
+                <h3>📧 Email</h3>
+                <p>bellasrestaurantny@gmail.com<br>vmichialis@yahoo.com</p>
+            </div>
+            <div class="info-card">
+                <h3>🕒 Hours</h3>
+                <p>Mon-Sat: 7:00 AM - 8:00 PM<br>Sunday: 7:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">Total: $<span id="total">0.00</span></div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <p>Follow us on social media for updates and special offers!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Business Hours</h3>
+                <p><strong>Monday - Saturday</strong><br>7:00 AM - 8:00 PM</p>
+                <p><strong>Sunday</strong><br>7:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025© Bella's Restaurant | Privacy Policy | Powered by Vrindi Inc.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Load images on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            // Gallery
+            document.getElementById('gallery-img-1').src = 'images/03.jpg';
+            document.getElementById('gallery-img-2').src = 'images/14.jpg';
+            document.getElementById('gallery-img-3').src = 'images/348s.jpg';
+            
+            // Menu items
+            document.getElementById('menu-img-1').src = 'images/08.jpg';
+            document.getElementById('menu-img-2').src = 'images/09.jpg';
+            document.getElementById('menu-img-3').src = 'images/10.jpg';
+            document.getElementById('menu-img-4').src = 'images/11.jpg';
+            document.getElementById('menu-img-5').src = 'images/15.jpg';
+            document.getElementById('menu-img-6').src = 'images/03.jpg';
+            
+            // About section
+            document.getElementById('about-img').src = 'images/348s.jpg';
+            
+            console.log('All images loaded!');
+        });
+    </script>
+</body>
+</html>

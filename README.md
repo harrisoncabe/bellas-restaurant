@@ -22,10 +22,10 @@ Family-owned restaurant website serving Tarrytown, NY since 1979.
    - **Option 2**: Use a local server (recommended):
      ```bash
      # Python 3
-     python -m http.server 8000
+     python3 -m http.server 8000
      
      # Python 2
-     python -m SimpleHTTPServer 8000
+     python3 -m SimpleHTTPServer 8000
      
      # Node.js (if you have http-server installed)
      npx http-server
@@ -71,6 +71,7 @@ Bella's Restaurant
 5 S Broadway, Tarrytown, NY 10591
 Phone: (914) 332-0444
 Email: bellasrestaurantny@gmail.com
+
 
 
 
